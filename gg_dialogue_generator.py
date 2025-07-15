@@ -118,7 +118,6 @@ original_sentence_lengths = df[df['original_sentence_length'] > 0]['original_sen
 
 # Tokenizing and examining generated data
 generated_all_words = nltk.word_tokenize(full_cleaned_generated_dialogue)
-generated_all_words = nltk.word_tokenize(full_cleaned_generated_dialogue)
 generated_word_freq = pd.Series(generated_all_words).value_counts().head(20)
 
 generated_df['generated_sentence_length'] = generated_df['cleaned_line'].apply(lambda x: len(x.split()) if x else 0)
